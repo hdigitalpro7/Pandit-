@@ -234,30 +234,151 @@ section { animation: fadeUp 0.8s ease both; }
         </div>
       </div>
     </section>
-    <!-- ABOUT PANDIT JI -->
-    <section style="background:linear-gradient(180deg,#fffaf0,#fff);padding:40px 0;border-top:5px solid var(--gold);border-bottom:5px solid var(--gold);">
-      <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;">
-        <div>
-          <img src="Гороскоп для Весов, Льва, Рака_ что вас ждет_.jpeg" alt="Pandit Vaibhav Shastri Ji" style="width:100%;max-width:320px;border-radius:14px;box-shadow:var(--shadow); height: 398px;">
-        </div>
-        <div>
-          <h2 style="font-family:'Playfair Display';color:var(--deep-red);margin:0 0 10px;">About Pandit Vaibhav Shastri Ji</h2>
-          <p style="font-size:16px;line-height:1.7;color:#422c2c;margin-top:0;">
-            With years of experience in <strong>Vedic astrology, Kundli reading, and cosmic remedies</strong>, 
-            <strong>Pandit Vaibhav Shastri Ji</strong> has guided countless people toward success, peace, and harmony. 
-            His accurate predictions and powerful solutions are based on authentic Vedic principles and divine energy alignment.
-          </p>
-          <p style="font-size:16px;line-height:1.7;color:#422c2c;">
-            Whether it's <strong>love, marriage, health, finance, or business</strong>, Pandit Ji’s insights help overcome obstacles quickly and safely. 
-            Every consultation is <strong>confidential, result-oriented, and personalized</strong> as per your planetary combinations.
-          </p>
-          <a href="https://wa.me/+919664432853?text=Namaste%20Pandit%20Ji%2C%20I%20want%20to%20book%20a%20consultation" 
-             style="display:inline-block;margin-top:12px;background:var(--gold);color:var(--deep-red);padding:12px 22px;border-radius:10px;font-weight:800;text-decoration:none;box-shadow:var(--shadow);">
-            💫 Consult Now on WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
+   <!-- ABOUT PANDIT JI -->
+<section class="about-pandit" aria-labelledby="about-pandit-heading">
+  <div class="container">
+    <figure class="pandit-figure">
+      <!-- use a simpler filename or provide webp / srcset for better performance -->
+     <img
+      src="download (2).jpeg"
+      alt="Pandit Vaibhav Shastri Ji - Expert Vedic Astrologer "
+      loading="lazy"
+      class="pandit-img " style="height: 400px;"
+    >
+    </figure>
+
+    <div class="pandit-content">
+      <h2 id="about-pandit-heading">About Pandit Vaibhav Shastri Ji</h2>
+
+      <p>
+        With years of experience in <strong>Vedic astrology, Kundli reading, and cosmic remedies</strong>,
+        <strong>Pandit Vaibhav Shastri Ji</strong> has guided countless people toward success, peace, and harmony.
+        His accurate predictions and powerful solutions are based on authentic Vedic principles and divine energy alignment.
+      </p>
+
+      <p>
+        Whether it's <strong>love, marriage, health, finance, or business</strong>, Pandit Ji’s insights help overcome obstacles quickly and safely.
+        Every consultation is <strong>confidential, result-oriented, and personalized</strong> as per your planetary combinations.
+      </p>
+
+      <a
+        class="cta-whatsapp"
+        href="https://wa.me/+919664432853?text=Namaste%20Pandit%20Ji%2C%20I%20want%20to%20book%20a%20consultation"
+        role="button"
+        aria-label="Consult now on WhatsApp"
+      >
+        💫 Consult Now on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root{
+    --gold: #f4c430;        /* keep your existing vars if already defined */
+    --deep-red: #7b2e2e;
+    --shadow: 0 8px 20px rgba(66, 44, 44, 0.12);
+    --content-max: 1100px;
+  }
+
+  .about-pandit{
+    background: linear-gradient(180deg,#fffaf0,#fff);
+    padding: 40px 16px;
+    border-top: 5px solid var(--gold);
+    border-bottom: 5px solid var(--gold);
+  }
+
+  .about-pandit .container{
+    max-width: var(--content-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    align-content: center;
+    padding: 0 12px;
+  }
+
+  /* Image column */
+  .pandit-figure{
+    margin: 0;
+    display: flex;
+    justify-content: center; /* center image on small widths when stacked */
+  }
+
+  .pandit-img{
+    width: 100%;
+    max-width: 360px;       /* limits size on large screens */
+    height: auto;           /* preserve aspect ratio */
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    object-fit: cover;      /* crops nicely if different aspect ratios provided */
+    display: block;
+  }
+
+  /* Content column */
+  .pandit-content h2{
+    font-family: "Playfair Display", serif;
+    color: var(--deep-red);
+    margin: 0 0 10px;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+  }
+
+  .pandit-content p{
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #422c2c;
+    margin: 0 0 12px;
+  }
+
+  .cta-whatsapp{
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--gold);
+    color: var(--deep-red);
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  .cta-whatsapp:focus,
+  .cta-whatsapp:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(66,44,44,0.14);
+    outline: none;
+  }
+
+  .cta-whatsapp:focus{
+    box-shadow: 0 0 0 4px rgba(244,196,48,0.12);
+  }
+
+  /* Responsive: stack on narrow screens */
+  @media (max-width: 768px){
+    .about-pandit .container{
+      grid-template-columns: 1fr;
+      gap: 18px;
+      text-align: center;
+    }
+    .pandit-content p{
+      margin-left: 6%;
+      margin-right: 6%;
+    }
+    .pandit-figure{ order: -1; } /* show image above content on mobile */
+  }
+
+  /* Fine tune for very small screens */
+  @media (max-width: 420px){
+    .pandit-img{
+      max-width: 320px;
+    }
+    .pandit-content p{
+      font-size: 0.98rem;
+    }
+  }
+</style>
 
     <!-- SERVICES -->
     <section>
